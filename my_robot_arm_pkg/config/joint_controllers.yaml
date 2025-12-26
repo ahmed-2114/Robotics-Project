@@ -1,0 +1,50 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    arm_group_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    hand_group_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+arm_group_controller:
+  ros__parameters:
+    joints:
+      - J1
+      - J2
+      - J3
+      - J4
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    allow_nonzero_velocity_at_trajectory_end: true
+    open_loop_control: true
+    allow_partial_joints_goal: false
+    constraints:
+      stopped_velocity_tolerance: 0.01
+      goal_time: 0.0
+      
+hand_group_controller:
+  ros__parameters:
+    joints:
+      - J6
+      - J5
+      - leftTip_joint   # Added
+      - rightTip_joint  # Added
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    allow_nonzero_velocity_at_trajectory_end: true
+    gains:
+      J6: {p: 50.0, i: 0.01, d: 0.1}
+      J5: {p: 50.0, i: 0.01, d: 0.1}
+      leftTip_joint: {p: 20.0, i: 0.01, d: 0.1}
+      rightTip_joint: {p: 20.0, i: 0.01, d: 0.1}
