@@ -9,19 +9,19 @@ moveit_simple_controller_manager:
 
   arm_group_controller:
     type: FollowJointTrajectory
-    action_ns: follow_joint_trajectory
-    default : true
     joints:
       - J1
       - J2
       - J3
       - J4
+    action_ns: follow_joint_trajectory
+    default: true
   hand_group_controller:
     type: FollowJointTrajectory
-    action_ns: follow_joint_trajectory
-    default : true
     joints:
       - J5
       - rightTip_joint
       - J6
       - leftTip_joint
+    action_ns: follow_joint_trajectory
+    default: true

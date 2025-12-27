@@ -1,4 +1,3 @@
-
 # Default initial positions for urdf_moveit's ros2_control fake system
 
 initial_positions:
@@ -10,3 +9,4 @@ initial_positions:
   J6: 0.0
   leftTip_joint: 0.0
   rightTip_joint: 0.0
+  

@@ -35,16 +35,76 @@
         <joint name="J4" value="0"/>
     </group_state>
     <group_state name="close" group="hand_group">
+        <joint name="J5" value="0.1"/>
+        <joint name="J6" value="-0.1"/>
+        <joint name="leftTip_joint" value="-0.1"/>
+        <joint name="rightTip_joint" value="0.1"/>
+    </group_state>
+    <group_state name="open" group="hand_group">
+        <joint name="J5" value="0.84"/>
+        <joint name="J6" value="-0.84"/>
+        <joint name="leftTip_joint" value="-0.84"/>
+        <joint name="rightTip_joint" value="0.84"/>
+    </group_state>
+    <group_state name="wa2ef be qowa" group="arm_group">
+        <joint name="J1" value="0.6967"/>
+        <joint name="J2" value="0"/>
+        <joint name="J3" value="1.57"/>
+        <joint name="J4" value="1.57"/>
+    </group_state>
+    <group_state name="maksoofa" group="arm_group">
+        <joint name="J1" value="3.14"/>
+        <joint name="J2" value="0.5291"/>
+        <joint name="J3" value="-0.1"/>
+        <joint name="J4" value="0"/>
+    </group_state>
+    <group_state name="zero_hand" group="hand_group">
         <joint name="J5" value="0"/>
         <joint name="J6" value="0"/>
         <joint name="leftTip_joint" value="0"/>
         <joint name="rightTip_joint" value="0"/>
     </group_state>
-    <group_state name="open" group="hand_group">
-        <joint name="J5" value="1.5009"/>
-        <joint name="J6" value="-1.5009"/>
-        <joint name="leftTip_joint" value="-1.5009"/>
-        <joint name="rightTip_joint" value="1.5"/>
+    <group_state name="pick_base" group="arm_group">
+        <joint name="J1" value="0"/>
+        <joint name="J2" value="0.9599"/>
+        <joint name="J3" value="0.8727"/>
+        <joint name="J4" value="0.3491"/>
+    </group_state>
+    <group_state name="hitler" group="arm_group">
+        <joint name="J1" value="0.9561"/>
+        <joint name="J2" value="0.6852"/>
+        <joint name="J3" value="1.529"/>
+        <joint name="J4" value="1.3678"/>
+    </group_state>
+    <group_state name="move_to_drop_off" group="arm_group">
+        <joint name="J1" value="0.8727"/>
+        <joint name="J2" value="0.1744"/>
+        <joint name="J3" value="0.5235"/>
+        <joint name="J4" value="0.1744"/>
+    </group_state>
+    <group_state name="drop_base" group="arm_group">
+        <joint name="J1" value="0.8727"/>
+        <joint name="J2" value="0.9599"/>
+        <joint name="J3" value="0.8727"/>
+        <joint name="J4" value="0.3491"/>
+    </group_state>
+    <group_state name="edeny" group="arm_group">
+        <joint name="J1" value="0"/>
+        <joint name="J2" value="0.9108"/>
+        <joint name="J3" value="0.4549"/>
+        <joint name="J4" value="3.14"/>
+    </group_state>
+    <group_state name="wdnak menen ya bo7a" group="arm_group">
+        <joint name="J1" value="1.6543"/>
+        <joint name="J2" value="0.7026"/>
+        <joint name="J3" value="2.2808"/>
+        <joint name="J4" value="2.7283"/>
+    </group_state>
+    <group_state name="assemble" group="arm_group">
+        <joint name="J1" value="0.8727"/>
+        <joint name="J2" value="0.7546"/>
+        <joint name="J3" value="0.8727"/>
+        <joint name="J4" value="0.0432"/>
     </group_state>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="base_link" link2="leftTip" reason="Never"/>
